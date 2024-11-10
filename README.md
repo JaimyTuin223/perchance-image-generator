@@ -67,3 +67,9 @@ The code currently doesn't support Linux, as firefox isn't available on that OS,
 ## Support
 
 For support you can create a support post in the  [Ginger Productions](https://discord.gg/8KxqWAKCPe) Discord server.
+
+## Generated images
+These 2 images below have been created using the AI image generator:
+
+![App Screenshot](https://spud.jaimytuin.com/media/projectShowcase/AIexample1.jpeg)
+![App Screenshot](https://spud.jaimytuin.com/media/projectShowcase/AIexample2.jpeg)
