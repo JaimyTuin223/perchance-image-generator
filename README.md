@@ -10,50 +10,44 @@ Generate AI image prompts from perchance in your Node.JS code.
 Below are the steps explained to set up all required stuff for the system to run.
 
 #### 1. Module files
-On the main page of the GitHub repository select the file option and download as .zip file. Extract this file in your project / workspace where you want to use the system.
-
-#### 2. Node modules
-First install all required node modules using the code below in your cmd prompt.
+Install the package and all it's dependencies using the npm install command in your project environment.
 ```bash
-  npm i fs, path, axios, playwright
+  npm i perchance-image-generator
 ```
 
-#### 3. Playwright setup
-Now we are going to setup the module Playwright, this can easily be done by running
+#### 2. Playwright setup
+Now setup the playwright module, this is done using the npx command.
 ```bash
   npx playwright install
 ```
 
-#### 4. Usage
-In files you want to use the system you will need to import the module, this can be done with the code below:
+## Usage/Examples
+To use the functions below you will need to include these 2 lines at the top of your file.
 ```bash
-  const perchanceImgGen = require('./perchance-image-generator/index.js')
-  const AI = new perchanceImgGen()
+  const perchanceImageGenerator = require('perchance-image-generator')
+  const imageGenerator = new perchanceImageGenerator()
 ```
 
-#### Have fun!
-Now you have set up the code to run! Feel free to modify and have a look around to customise it to your needs!
-## Usage/Examples
-Different functions the code supports in this version:
+Current available functions:
 
 ### generateAndAttach()
 Create a Discord attachment to use and send back to the user via your Discord bot!
 ```javascript
-let attachment = await AI.generateAndAttach("prompt", "negative prompt", "style") // Generate prompt and receive the attachment
+let attachment = await imageGenerator.generateAndAttach("prompt", "negative prompt", "style") // Generate prompt and receive the attachment
 return message.reply({ content: `AI img generator test`, files: [attachment]}) // Return a message with the image
 ```
 
 ### generateAndSave()
 Safe your creations to a local folder (Default: generated-pictures) in the workspace.
 ```javascript
-await AI.generateAndSave("prompt", "negative prompt", "style") // Generate prompt and save it
+await imageGenerator.generateAndSave("prompt", "negative prompt", "style") // Generate prompt and save it
 ```
 
 ### clearImageDir()
 It might get a bit messy if you constantly save your creations, that's why the code also has a directory cleaner feature.
 This will empty the generated-pictures folder completely!
 ```javascript
-await AI.clearImageDir() // Clear the generated-pictures directory
+await imageGenerator.clearImageDir() // Clear the generated-pictures directory
 ```
 
 
@@ -69,7 +63,7 @@ The code currently doesn't support Linux, as firefox isn't available on that OS,
 For support you can create a support post in the  [Ginger Productions](https://discord.gg/8KxqWAKCPe) Discord server.
 
 ## Generated images
-These 2 images below have been created using the AI image generator:
+These 2 images below have been created using the Painted Anime style of the AI image generator:
 
+![App Screenshot](https://spud.jaimytuin.com/media/projectShowcase/AIexample3.png)
 ![App Screenshot](https://spud.jaimytuin.com/media/projectShowcase/AIexample1.jpeg)
-![App Screenshot](https://spud.jaimytuin.com/media/projectShowcase/AIexample2.jpeg)
