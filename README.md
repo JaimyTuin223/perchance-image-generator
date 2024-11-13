@@ -26,6 +26,7 @@ To use the functions below you will need to include these 2 lines at the top of 
 ```bash
   const perchanceImageGenerator = require('perchance-image-generator')
   const imageGenerator = new perchanceImageGenerator()
+  // You can use "new perchanceImageGenerator({ silent: true })" to run the generator in Silent mode.
 ```
 
 Current available functions:
