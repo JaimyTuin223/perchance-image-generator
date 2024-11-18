@@ -2,7 +2,7 @@
   "name": "perchance-image-generator",
   "version": "1.0.0",
   "description": "Generate AI image prompts from perchance in your Node.JS code.",
-  "main": "index.js",
+  "main": "lib/index.js",
   "dependencies": {
     "axios": "^1.7.7",
     "fs": "^0.0.1-security",
