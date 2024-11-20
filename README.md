@@ -6,19 +6,9 @@ Generate AI image prompts from perchance in your Node.JS code.
 
 
 ## Installation
-
-Below are the steps explained to set up all required stuff for the system to run.
-
-#### 1. Module files
 Install the package and all it's dependencies using the npm install command in your project environment.
 ```bash
   npm i perchance-image-generator
-```
-
-#### 2. Playwright setup
-Now setup the playwright module, this is done using the npx command.
-```bash
-  npx playwright install
 ```
 
 ## Usage/Examples
