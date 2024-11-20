@@ -1,0 +1,30 @@
+name: Node.js Package
+
+on:
+  release:
+    types: [created]  # Workflow will trigger when a release is created
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4  # Checkout the code from the repository
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20.x'  # Node.js version (you can update to other versions if needed)
+      - run: npm ci  # Install dependencies from package-lock.json
+      - run: npm test  # Run tests (ensure you have tests in place)
+
+  publish-npm:
+    needs: build  # This job depends on the success of the build job
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4  # Checkout the code again for the publish step
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20.x'  # Make sure the Node.js version matches the build job
+          registry-url: https://registry.npmjs.org/  # Use npm registry (update for GitHub Packages if needed)
+      - run: npm ci  # Install dependencies again in the publish job
+      - run: npm publish  # Publish the package to npm registry
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.npm_token }}  # Use the npm authentication token stored in secrets
