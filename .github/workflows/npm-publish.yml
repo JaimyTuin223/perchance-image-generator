@@ -23,7 +23,7 @@ jobs:
         run: npm install -g npm@latest  # Ensure the latest npm version
 
       - name: Install dependencies
-        run: npm ci
+        run: npm install
         env:
           NODE_AUTH_TOKEN: ${{ secrets.npm_token }}
 
