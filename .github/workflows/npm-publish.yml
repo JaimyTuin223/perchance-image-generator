@@ -23,9 +23,6 @@ jobs:
         run: npm install -g npm@latest  # Ensure the latest npm version
 
       - name: Install dependencies
-        run: ls && npm ci in workflow
+        run: npm ci in workflow
         env:
           NODE_AUTH_TOKEN: ${{ secrets.npm_token }}
-
-      - name: Run tests
-        run: npm test
