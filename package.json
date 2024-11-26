@@ -1,6 +1,6 @@
 {
   "name": "perchance-image-generator",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Generate AI image prompts from perchance in your Node.JS code.",
   "main": "lib/index.js",
   "dependencies": {
@@ -17,6 +17,12 @@
     "type": "git",
     "url": "git+https://github.com/JaimyTuin223/perchance-image-generator.git"
   },
+  "files": [
+    "lib/",
+    "src/",
+    "README.md",
+    "package.json"
+  ],
   "keywords": [
     "perchance",
     "AI",
