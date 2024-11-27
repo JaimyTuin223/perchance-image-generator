@@ -2,6 +2,7 @@
 ## Perchance image generator
 Generate AI image prompts from perchance in your Node.JS code.
 
+##### Available on [npmjs.com](https://www.npmjs.com/package/perchance-image-generator)!
 ##### Inspired by python based [perchance-image-generator](https://github.com/lsimek/perchance-image-generator) by Isimek.
 
 
